@@ -63,13 +63,14 @@ public class Solution {
 		if (l2 == null) return l1;
 		ListNode head;
 		
-		if (l1.val <= l2.val) {
-			head = l1;
-			l1 = l1.next;
-		} else {
-			head = l2;
-			l2 = l2.next;
-		}
+//		if (l1.val <= l2.val) {
+//			head = l1;
+//			l1 = l1.next;
+//		} else {
+//			head = l2;
+//			l2 = l2.next;
+//		}
+		head = new ListNode(0);
 		ListNode cursor = head;
 
 		while (l1 != null && l2 != null) {
@@ -85,6 +86,6 @@ public class Solution {
 		}
 		if (l1 != null) cursor.next = l1;
 		if (l2 != null) cursor.next = l2;
-		return head;
+		return head.next;
 	}
 }
